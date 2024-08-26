@@ -20,8 +20,9 @@ public class CallServiceV2 {
 
     public void external() {
         log.info("call external");
+        // CallServiceV2 callServiceV2 = applicationContext.getBean(CallServiceV2.class);
         CallServiceV2 callServiceV2 = callServiceProvider.getObject();
-        callServiceV2.internal(); //내부 메서드 호출(this.internal())
+        callServiceV2.internal();  //외부 메서드 호출
     }
 
     public void internal() {
